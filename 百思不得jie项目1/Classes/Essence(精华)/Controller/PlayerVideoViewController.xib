@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlayerVideoViewController">
+            <connections>
+                <outlet property="videoPlayer" destination="bIe-hD-WwJ" id="S7A-EB-251"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IE8-Co-zCM">
+                    <state key="normal" image="show_image_back_icon"/>
+                    <connections>
+                        <action selector="back:" destination="-1" eventType="touchUpInside" id="aod-6B-wVz"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bIe-hD-WwJ" customClass="ZFPlayerView">
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="bIe-hD-WwJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9LP-ff-vTi"/>
+                <constraint firstItem="IE8-Co-zCM" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Be5-sw-Dc3"/>
+                <constraint firstItem="bIe-hD-WwJ" firstAttribute="top" secondItem="IE8-Co-zCM" secondAttribute="bottom" id="KjX-gJ-lD9"/>
+                <constraint firstAttribute="trailing" secondItem="bIe-hD-WwJ" secondAttribute="trailing" id="Osn-PO-9oR"/>
+                <constraint firstAttribute="bottom" secondItem="bIe-hD-WwJ" secondAttribute="bottom" id="POW-76-SHH"/>
+                <constraint firstItem="IE8-Co-zCM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Ysc-9s-Srd"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="show_image_back_icon" width="35" height="35"/>
+    </resources>
+</document>

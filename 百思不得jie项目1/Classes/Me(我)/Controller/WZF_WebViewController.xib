@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WZF_WebViewController">
+            <connections>
+                <outlet property="beforeAge" destination="xS8-7J-dPk" id="g1s-Pw-DxZ"/>
+                <outlet property="nextAge" destination="ZA6-yu-ZaH" id="ebb-hX-MCc"/>
+                <outlet property="reload" destination="jhh-Ug-aIJ" id="9PQ-yI-UjN"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webView" destination="mvL-Dl-gI9" id="fJW-Gt-cW1"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mvL-Dl-gI9">
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </webView>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gzd-Cc-wOB">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="375" id="V9y-8r-REo"/>
+                        <constraint firstAttribute="height" constant="44" id="Ymc-IR-EHD"/>
+                    </constraints>
+                    <items>
+                        <barButtonItem enabled="NO" title="上一页" id="xS8-7J-dPk">
+                            <connections>
+                                <action selector="before:" destination="-1" id="KVt-gS-LR2"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem enabled="NO" title="下一页" id="ZA6-yu-ZaH">
+                            <connections>
+                                <action selector="next:" destination="-1" id="Ck7-WU-vvf"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="lSQ-Xh-94g"/>
+                        <barButtonItem title="刷新" id="jhh-Ug-aIJ">
+                            <connections>
+                                <action selector="reload:" destination="-1" id="Qyn-Wz-gcX"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="gzd-Cc-wOB" secondAttribute="bottom" id="FWk-jt-AWg"/>
+                <constraint firstItem="gzd-Cc-wOB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Mi3-kh-VvP"/>
+                <constraint firstAttribute="bottom" secondItem="mvL-Dl-gI9" secondAttribute="bottom" id="OUc-AD-EI5"/>
+                <constraint firstAttribute="trailing" secondItem="gzd-Cc-wOB" secondAttribute="trailing" id="Ona-8X-Qj6"/>
+                <constraint firstAttribute="trailing" secondItem="mvL-Dl-gI9" secondAttribute="trailing" id="Op5-J8-gIF"/>
+                <constraint firstItem="mvL-Dl-gI9" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="e9T-BW-dhe"/>
+                <constraint firstItem="mvL-Dl-gI9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hNP-Op-oQj"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
